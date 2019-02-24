@@ -1,14 +1,13 @@
 package com.example.demo.user.service;
 
-import com.example.demo.user.model.User;
-import com.example.demo.user.view.UserRequest;
 import java.util.List;
 import lombok.Setter;
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.demo.user.repository.UserRepository;
+import com.example.demo.user.model.User;
+import com.example.demo.user.view.UserRequest;
 
 @Setter
 @Log

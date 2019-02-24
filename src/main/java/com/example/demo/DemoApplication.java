@@ -3,7 +3,6 @@ package com.example.demo;
 import com.example.demo.user.model.User;
 import com.example.demo.user.repository.UserRepository;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.TimeZone;
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +29,6 @@ public class DemoApplication implements CommandLineRunner {
 	@PostConstruct
 	public void init(){
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));   // It will set UTC timezone
-		System.out.println("Spring boot application running in UTC timezone :"+new Date());   // It will print UTC timezone
 	}
 
 	@Override
