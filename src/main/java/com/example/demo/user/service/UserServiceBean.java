@@ -26,4 +26,19 @@ public class UserServiceBean implements UserService {
         }
         return false;
     }
+
+    @Override
+    public User getUserById(Long id) throws Exception {
+        return userRepository.getOne(id);
+    }
+
+    @Override
+    public void deleteUser(Long id) throws Exception {
+        userRepository.deleteById(id);
+    }
+
+    @Override
+    public void createUser(User newUser) throws Exception {
+        userRepository.save(newUser);
+    }
 }
