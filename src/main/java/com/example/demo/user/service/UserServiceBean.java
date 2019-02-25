@@ -19,7 +19,7 @@ public class UserServiceBean implements UserService {
 
     @Override
     public Boolean login(UserRequest request) throws Exception {
-        List<User> user = userRepository.findAll();
+        User user = userRepository.findByUsernameAndPassword(request.getUsername(), request.getPassword());
         if (user != null) {
             return true;
         }
